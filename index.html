@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,24 +11,114 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+    @import url('https://fonts.google.com/specimen/Lexend+Deca');
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    body
+    {
+      font-family: 'Lexend Deca', sans-serif;
+    }
+    #contenedorElementos
+    {
+      /*margin: 250px 300px 300px 250px;*/
+      display: flex;
+      color:hsla(0, 0%, 100%, 0.75);
+      /*align-items: center;*/
+      justify-content: center;
+      
+      /*margin: 243px 364px 186px 364px;*/
+    }
+    .titulo
+    {
+      margin-left: 50px;
+      margin-top: 50px;;
+      margin-bottom: 45px;
+      text-transform: uppercase;
+      font-family: 'Big Shoulders Display', cursive;
+    }
+    .descripcion
+    {
+      margin-left: 50px;
+      margin-bottom: 55px;
+      margin-right: 50px;
+    }
+    .learn
+    {
+      width: 150px;
+      height: 20px;
+      margin-bottom: 55px;
+      margin-right: 150px;
+      color: initial;
+      background-color: hsl(0, 0%, 95%);
+      text-align: center;
+      text-justify: center;
+      padding: 12px 12px;
+      border-radius: 44px;
+      border:1px solid none;   
+    }
+
+    .learn:hover
+    {
+      background-color: inherit;
+      color:hsla(0, 0%, 100%, 0.75);
+      border: 1px solid hsla(0, 0%, 100%, 0.75);
+    }
+    #contenedorSedans
+    {
+      width: 315px;
+      height: 510px;
+      background-color: hsl(31, 77%, 52%);
+    }
+    #contenedorSuvs
+    {
+      width: 315px;
+      height: 510px;
+      background-color: hsl(184, 100%, 22%);
+    }
+    #contenedorLuxury
+    {
+      width: 315px; 
+      height: 510px;
+      background-color: hsl(179, 100%, 13%);
+    }
+    .imagen
+    {
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    @media only screen and (max-width: 375px) {
+      #contenedorDeElementos
+      {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
-  
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
+  <section id="contenedorElementos">
+    <article id="contenedorSedans">
+      <img class="imagen" src="images/icon-sedans.svg" alt="icono sedan"> 
+      <h2 class="titulo">Sedans</h2>
+      <p class="descripcion">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+      or on your next road trip.</p>
+      <p class="descripcion learn">Learn More</p>
+    </article>
 
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
+    <article id="contenedorSuvs">
+      <img src="images/icon-suvs.svg" class="imagen">
+      <h2 class="titulo">SUVs</h2>
+      <p class="descripcion">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+      <p class="descripcion learn">Learn More</p>
+    </article>
 
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
-  
+    <article id="contenedorLuxury">
+      <img src="images/icon-luxury.svg" class="imagen">
+      <h2 class="titulo">Luxury</h2>
+      <p class="descripcion">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+      <p class="descripcion learn">Learn More</p>
+    </article>
+  </section>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

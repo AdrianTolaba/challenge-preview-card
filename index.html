@@ -30,7 +30,8 @@
       /*margin: 250px 300px 300px 250px;*/
       margin: auto;
       height: auto;
-      width: auto;
+      width: 100vh;
+      height: auto;
       display: flex;
       align-items: center;
       color:hsla(0, 0%, 100%, 0.75);
@@ -116,7 +117,7 @@
       margin-top: 50px;
       margin-left: 50px;
     }
-    @media(max-width: 375px) {
+    @media(max-width: 900px) {
       body
       {
         display: flex;
@@ -130,8 +131,11 @@
     }
     #fondoBlanco
     {
-      height: auto;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
       width: auto;
+      align-items: center;
       justify-content: center; 
     }
   </style>

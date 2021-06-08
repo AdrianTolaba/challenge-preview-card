@@ -18,26 +18,25 @@
     body
     {
       font-family: 'Lexend Deca', sans-serif;
-      height: auto;
+      height: fit-content;
       width: auto;
       display: flex;
       justify-content: center;
-      margin:0;
+      margin:auto;
+      align-items: center;
     }
     #contenedorElementos
     {
       /*margin: 250px 300px 300px 250px;*/
-      margin-top: 50px;
-      height: 700px;
-      width: 1400px;
+      margin: auto;
+      height: auto;
+      width: auto;
       display: flex;
       align-items: center;
-      align-self: center;
-      
       color:hsla(0, 0%, 100%, 0.75);
-      /*align-items: center;*/
-      justify-content: center;
+      justify-content: center; 
       border-radius: 55px;
+      top:50%;
       
       /*margin: 243px 364px 186px 364px;*/
     }
@@ -117,17 +116,28 @@
       margin-top: 50px;
       margin-left: 50px;
     }
-    @media only screen and (max-width: 375px) {
-      #contenedorDeElementos
+    @media(max-width: 375px) {
+      body
+      {
+        display: flex;
+        flex-direction: column;
+      }
+      #contenedorElementos
       {
         display: flex;
         flex-direction: column;
       }
     }
+    #fondoBlanco
+    {
+      height: auto;
+      width: auto;
+      justify-content: center; 
+    }
   </style>
 </head>
 <body>
-  <div>
+  <div id="fondoBlanco">
   <section id="contenedorElementos">
     <article id="contenedorSedans">
       <img class="imagen" src="images/icon-sedans.svg" alt="icono sedan"> 

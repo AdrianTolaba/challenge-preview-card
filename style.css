@@ -4,7 +4,11 @@ body{
     font-family: 'Lexend Deca', sans-serif;
     display: flex;
     flex-direction: column;
-    
+    height: auto;
+    width: auto;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
 }
 :root{
     --colorSedan : hsl(31, 77%, 52%);
@@ -14,9 +18,7 @@ body{
     --grisMuyClaro : hsl(0, 0%, 95%);
 }
 
-#contenedor{
-    /*width: 900px;*/
-    height: 400px;
+.contenedor{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,11 +26,13 @@ body{
     margin-bottom: 8vw;
     margin-left: 10vw;
     margin-right: 10vw;
+    
 }
 
 #contenedorSedan{
     background-color: var(--colorSedan);
     color: var(--colorSedan);
+    border-radius: 10px 0px 0px 10px;
 }
 
 #contenedorSuvs{
@@ -39,6 +43,7 @@ body{
 #contenedorLuxury{
     background-color: var(--colorLuxury);
     color: var(--colorLuxury);
+    border-radius: 0px 10px 10px 0px;
 }
 
 .contenedorElementosDescripcion{
@@ -49,8 +54,9 @@ body{
 .botonLearn{
     display: inline-block;
     color: inherit;
-    padding: 0.5vw 1vw;
+    padding: 10px 15px;
     background-color: var(--grisMuyClaro);
+    border: 1px solid var(--grisMuyClaro);
     border-radius: 25px;
 }
 
@@ -68,7 +74,10 @@ body{
 }
 
 .descripcion{
+    height: 100px;
+    width: 240px;
     font-size: 15px;
+    padding-bottom: 25px;
     color: var(--blancoParrafos);
 }
 
@@ -83,4 +92,28 @@ body{
     margin-top: 50px;
     margin-left: 50px;
     
+}
+
+@media (max-width: 900px) {
+    
+    body{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .contenedor{
+        
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5vw auto;
+    }
+    #contenedorSedan{
+    border-radius: 10px 10px 0px 0px;
+    }
+    #contenedorLuxury{
+    border-radius: 0px 0px 10px 10px;
+    }
 }
